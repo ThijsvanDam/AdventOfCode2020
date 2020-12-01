@@ -1,16 +1,7 @@
-# This is a sample Python script.
 import day_one
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    print("Day one: ")
+    print(day_one.get_multiplication_of_2020_sum_two(day_one.get_input_list()))
+    print(day_one.get_multiplication_of_2020_sum_three(day_one.get_input_list()))
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

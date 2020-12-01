@@ -1,13 +1,6 @@
 total_sum = 2020
 
 
-def get_input_list():
-    input_list = []
-    with open("day_one_input.txt", "r") as f:
-        [input_list.append(int(i)) for i in f]
-    return input_list
-
-
 def get_multiplication_of_2020_sum_two(number_list):
     for i in range(len(number_list)):
         if (total_sum - number_list[i]) in number_list:

@@ -1,6 +1,8 @@
 import day_one
 import day_two
 import day_three
+import day_four
+
 
 def get_input_list_string(prefix):
     input_list = []
@@ -14,6 +16,11 @@ def get_input_list_int(prefix):
     with open("{prefix}_input.txt".format(prefix=prefix), "r") as f:
         [input_list.append(int(i)) for i in f]
     return input_list
+
+
+def get_entire_input(prefix):
+    with open("{prefix}_input.txt".format(prefix=prefix), "r") as f:
+        return f.read()
 
 
 def day(current_day):
@@ -35,4 +42,4 @@ if __name__ == '__main__':
     print(day_three.count_trees_multiple_slopes(get_input_list_string("day_three")))
 
     day("four")
-
+    print(day_four.validate_passwords(get_entire_input("day_four")))

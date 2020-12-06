@@ -3,24 +3,25 @@ import day_two
 import day_three
 import day_four
 import day_five
+import day_six_oneliner
 
 
 def get_input_list_string(prefix):
     input_list = []
-    with open("{prefix}_input.txt".format(prefix=prefix), "r") as f:
+    with open("inputs/{prefix}_input.txt".format(prefix=prefix), "r") as f:
         [input_list.append(i) for i in f]
     return input_list
 
 
 def get_input_list_int(prefix):
     input_list = []
-    with open("{prefix}_input.txt".format(prefix=prefix), "r") as f:
+    with open("inputs/{prefix}_input.txt".format(prefix=prefix), "r") as f:
         [input_list.append(int(i)) for i in f]
     return input_list
 
 
-def get_entire_input(prefix):
-    with open("{prefix}_input.txt".format(prefix=prefix), "r") as f:
+def get_entire_input(prefix, postfix=""):
+    with open("inputs/{prefix}_input{postfix}.txt".format(prefix=prefix, postfix=postfix), "r") as f:
         return f.read()
 
 
@@ -50,3 +51,6 @@ if __name__ == '__main__':
     print(day_five.determine_my_seat(get_input_list_string("day_five")))
 
     day("six")
+    print(day_six_oneliner.get_distinct_letter_count_per_group_sum_oneliner(get_entire_input("day_six")))
+    print(day_six_oneliner.get_unanimous_letter_count_per_group_sum_oneliner(get_entire_input("day_six")))
+

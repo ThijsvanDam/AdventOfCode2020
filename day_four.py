@@ -16,14 +16,9 @@ def check_passport_valid(passport):
 
     for passport_line in passport_lines:
         splitted_pass_line = passport_line.split(":")
-        print("--")
         if len(splitted_pass_line) == 2 and splitted_pass_line[0] != "cid":
             if not check_line(splitted_pass_line[0], splitted_pass_line[1]):
-                print("False")
-
-                print("--")
                 return False
-        print("True")
     if len(passport_lines) == 7 and not (0 in list(map(lambda x: x.find("cid", 0), passport_lines))):
         return True
     else:
@@ -31,8 +26,6 @@ def check_passport_valid(passport):
 
 
 def check_line(prefix, value):
-    print(prefix)
-    print(value)
     if prefix == "byr":
         return (1920 <= int(value) <= 2002) and len(value) == 4
 

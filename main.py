@@ -2,6 +2,7 @@ import day_one
 import day_two
 import day_three
 import day_four
+import day_five
 
 
 def get_input_list_string(prefix):
@@ -43,3 +44,9 @@ if __name__ == '__main__':
 
     day("four")
     print(day_four.validate_passwords(get_entire_input("day_four")))
+
+    day("five")
+    print(day_five.determine_highest_seat(get_input_list_string("day_five")))
+    print(day_five.determine_my_seat(get_input_list_string("day_five")))
+
+    day("six")
